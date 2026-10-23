@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Form pendaftaran mahasiswa untuk Tugas Individu 3.">
+  <title>Pendaftaran Mahasiswa — Tugas Individu 3</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Lewati ke konten utama</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Beranda Pendaftaran Mahasiswa">
+      <span class="brand-mark" aria-hidden="true">03</span>
+      <span>Campus Registry</span>
+    </a>
+    <nav aria-label="Navigasi utama">
+      <a class="nav-link" href="detail.html">Lihat detail dummy</a>
+    </nav>
+  </header>
+  <main id="main-content" class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Tugas Individu 03 / Pendaftaran</p>
+        <h1>MULAI CERITA AKADEMIKMU DI SINI.</h1>
+        <p>Lengkapi data singkat di bawah ini. Form menggunakan metode GET untuk merancang query string menuju halaman detail informasi pendaftar.</p>
+      </div>
+      <div class="hero-aside">
+        <div class="hero-note">
+          <strong>Simple. Terarah.</strong>
+          <span>FORM / GET / DETAIL</span>
+        </div>
+      </div>
+    </section>
+    <div class="page-grid">
+      <section class="card" aria-labelledby="page-title">
+        <div class="card-header">
+          <span class="card-marker" aria-hidden="true"></span>
+          <div>
+            <h2 id="page-title">Form pendaftaran</h2>
+            <p>Field bertanda bintang wajib diisi.</p>
+          </div>
+        </div>
+        <form action="detail.html" method="get">
+          <div class="form-grid">
+            <div class="field full">
+              <label for="nama">Nama lengkap *</label>
+              <input id="nama" name="nama" type="text" placeholder="Contoh: Alfino Putra Ruslim" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="nim">Nomor induk mahasiswa *</label>
+              <input id="nim" name="nim" type="text" inputmode="numeric" placeholder="124140127" autocomplete="off" required>
+            </div>
+            <div class="field">
+              <label for="kelas">Kelas *</label>
+              <select id="kelas" name="kelas" required>
+                <option value="" selected disabled>Pilih kelas</option>
+                <option value="RA">RA</option>
+                <option value="RB">RB</option>
+                <option value="RC">RC</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="email">Email akademik *</label>
+              <input id="email" name="email" type="email" placeholder="nama@kampus.ac.id" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="program">Program studi *</label>
+              <input id="program" name="program" type="text" placeholder="Pengembangan Aplikasi Web" required>
+            </div>
+            <div class="field full">
+              <label for="motivasi">Motivasi singkat</label>
+              <input id="motivasi" name="motivasi" type="text" placeholder="Apa yang ingin kamu pelajari?">
+              <p class="helper">Data hanya dirancang untuk dikirim melalui URL, bukan diproses oleh halaman detail.</p>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="button" type="submit">Kirim pendaftaran <span aria-hidden="true">→</span></button>
+            <a class="button secondary" href="detail.html">Buka contoh detail</a>
+          </div>
+        </form>
+      </section>
+      <aside class="card info-card" aria-labelledby="info-title">
+        <div class="card-header">
+          <span class="card-marker" aria-hidden="true"></span>
+          <div>
+            <h2 id="info-title">Alur halaman</h2>
+            <p>Tiga langkah sederhana untuk demonstrasi query string.</p>
+          </div>
+        </div>
+        <dl class="info-list">
+          <div><dt>01 / Isi</dt><dd>Masukkan data di form pendaftaran.</dd></div>
+          <div><dt>02 / Kirim</dt><dd>Method GET menyusun parameter pada URL.</dd></div>
+          <div><dt>03 / Tinjau</dt><dd>Halaman detail menampilkan data dummy secara statis.</dd></div>
+        </dl>
+      </aside>
+    </div>
+    <h2 class="section-title">Parameter yang dirancang</h2>
+    <table class="data-table">
+      <caption>Struktur query string</caption>
+      <thead>
+        <tr><th>Nama parameter</th><th>Input</th><th>Keterangan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>nama</code></td><td>Nama lengkap</td><td><span class="badge">text</span></td></tr>
+        <tr><td><code>nim</code></td><td>Nomor induk mahasiswa</td><td><span class="badge">text</span></td></tr>
+        <tr><td><code>kelas</code></td><td>Pilihan kelas</td><td><span class="badge">select</span></td></tr>
+        <tr><td><code>email</code></td><td>Email akademik</td><td><span class="badge">email</span></td></tr>
+      </tbody>
+    </table>
+  </main>
+  <footer class="site-footer">Tugas Individu 3 · Alfino Putra Ruslim · 124140127 · RA</footer>
+</body>
+</html>
